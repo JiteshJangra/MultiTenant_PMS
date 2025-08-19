@@ -49,6 +49,7 @@ export default function ProjectForm({ orgSlug }: { orgSlug: string }) {
       await createOrg({ variables: { name: orgName, slug: orgSlug, email: orgEmail } });
       toast.success("Organization created!");
     } catch (error) {
+      // console.log(error);
       toast.error("Failed to create organization.");
     }
   };
